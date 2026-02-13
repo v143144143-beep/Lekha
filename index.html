@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Valentine’s Day Lucky ❤️</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #ff4e50, #f9a1bc);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 25px #ffe600; }
+}
+
+img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    margin: 25px 0;
+}
+
+.message {
+    font-size: 20px;
+    line-height: 1.8;
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4e50;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ffe6ec;
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 22px;
+    animation: floatUp 6s linear infinite;
+    color: white;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+#secret {
+    display: none;
+    margin-top: 25px;
+    font-size: 24px;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Happy Valentine’s Day Lucky ❤️</h1>
+
+    <!-- Add your image here -->
+    <img src="image.jpg" alt="Lucky ❤️">
+
+    <div class="message">
+        Lucky, you are my everything ❤️  
+        I may not be perfect, but I promise to make you happy  
+        with all that I have and all that I can.  
+        You are my love, my forever.
+    </div>
+
+    <button onclick="showSecret()">Click for a Special Message 💌</button>
+
+    <div id="secret">
+        Lucky ❤️, Will you be mine forever? 💍  
+        <br><br>
+        I love you now, forever, and always.
+    </div>
+</div>
+
+<!-- Optional background music -->
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function showSecret() {
+    document.getElementById("secret").style.display = "block";
+}
+
+// Floating hearts animation
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}, 400);
+</script>
+
+</body>
+</html>
